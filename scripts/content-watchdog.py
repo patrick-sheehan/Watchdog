@@ -1,3 +1,4 @@
+import re
 
 class ContentWatchdog:
     def __init__(self, minLength, maxLength, blockPhoneNumbers, blockEmailAddress):
@@ -28,6 +29,9 @@ class ContentWatchdog:
     # check if message is acceptable for submission
 
     def blockEmail(self, message):
+        if self.blockEmailAddress:
+            return re.match("\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b", message)
+
         return False
     # check if message should be blocked because of an email address
 
