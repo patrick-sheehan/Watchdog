@@ -16,20 +16,28 @@ class ContentWatchdog:
 
     def shouldSubmitMessage(self, message):
         if len(message) < self.minLength or len(message) > self.maxLength:
+            print 'LENGTH REJECTION : ' + message
             return False
         if self.blockEmail(message):
+            print 'EMAIL REJECTION  : ' + message
             return False
         if self.blockNumber(message):
+            print 'PHONE REJECTION  : ' + message
             return False
 
 
 
+        print 'Accepted!        : ' + message
         return True
     # check if message is acceptable for submission
 
     def blockEmail(self, message):
         regex_pattern = r'([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)'
-        return self.blockEmailAddress and re.search(regex_pattern, message)
+        if self.blockEmailAddress:
+            if re.search(regex_pattern, message) is not None:
+                return True
+
+        return False
     # check if message should be blocked because of an email address
 
     def blockNumber(self, message):
@@ -56,11 +64,11 @@ if __name__ == '__main__':
                 'girl can I have yo numba? can I have it?',
                 'ya try 911 fool',
                 'its actually 348-555-4718',
-                'Big Poppa\'s number be da following: (124) 555- 6843']
+                'Big Poppa\'s number be da following: (124) 555- 6843',
+                'Can I get away with my roommates phone number? as245j - 586 whoops 5453']
 
     for message in messages:
-        result = 'Accepted: ' if watchdog.shouldSubmitMessage(message) else 'REJECTED: '
-        print result + message
+        result = watchdog.shouldSubmitMessage(message)
 
     pass
 
