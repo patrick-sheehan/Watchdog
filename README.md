@@ -10,4 +10,6 @@ While WatchDog is under construction, it can still be used with your favorite py
 The python files can be copied into your directory or you can simply run certain scripts that are set up with test code
 
 ======
-CSCE470 Deliv: run the 'content-watchdog.py' script. The main method in that file creates an instance of the classifier and uses it to run analysis on sample content
+CSCE470 Checkpoint #3 - 11/20/14
+
+Simply run the 'content-watchdog.py' script. The main method in that file creates an instance of the classifier and uses it to run analysis on sample content
