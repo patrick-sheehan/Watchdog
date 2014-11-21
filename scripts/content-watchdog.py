@@ -28,15 +28,11 @@ class ContentWatchdog:
     # check if message is acceptable for submission
 
     def blockEmail(self, message):
-        if self.blockEmailAddress:
-            return re.search("\b[A-Z0-9._%+-]\*+@[A-Z0-9.-]+\.[A-Z]{2,4}\b", message)
-
-        return False
+        regex_pattern = r'([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)'
+        return self.blockEmailAddress and re.search(regex_pattern, message)
     # check if message should be blocked because of an email address
 
     def blockNumber(self, message):
-        # if self.blockEmailAddress:
-        #     return re.search("[0-9]{3}")
 
         return False
 
