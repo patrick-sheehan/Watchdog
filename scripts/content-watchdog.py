@@ -33,7 +33,13 @@ class ContentWatchdog:
     # check if message should be blocked because of an email address
 
     def blockNumber(self, message):
+        listOfNumbers = map(int, re.findall('\d+', message))
+        numberString = ""
+        for number in listOfNumbers:
+            numberString += str(number)
 
+        if len(numberString) == 10:
+            return True
         return False
 
     # check if message should be blocked because of a phone number
