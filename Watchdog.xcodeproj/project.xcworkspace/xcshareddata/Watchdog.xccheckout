@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A6B1557B-6ADC-4BCD-818E-0E80DA10322D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Watchdog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB9C02E9313E64BF41640AF890E85D985263D2D7</key>
+		<string>https://github.com/pas0185/Watchdog.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Watchdog.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB9C02E9313E64BF41640AF890E85D985263D2D7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pas0185/Watchdog.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB9C02E9313E64BF41640AF890E85D985263D2D7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB9C02E9313E64BF41640AF890E85D985263D2D7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Watchdog</string>
+		</dict>
+	</array>
+</dict>
+</plist>

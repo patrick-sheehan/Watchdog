@@ -41,6 +41,17 @@
 		CD9C0A541A2E44A900E767DA /* Watchdog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Watchdog.m; sourceTree = "<group>"; };
 		CD9C0A5A1A2E44A900E767DA /* WatchdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9C0A601A2E44A900E767DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9C0A6D1A2E4D3B00E767DA /* .name */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .name; sourceTree = "<group>"; };
+		CD9C0A6F1A2E4D3B00E767DA /* Patrick.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Patrick.xml; sourceTree = "<group>"; };
+		CD9C0A701A2E4D3B00E767DA /* encodings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = encodings.xml; sourceTree = "<group>"; };
+		CD9C0A711A2E4D3B00E767DA /* misc.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = misc.xml; sourceTree = "<group>"; };
+		CD9C0A721A2E4D3B00E767DA /* modules.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = modules.xml; sourceTree = "<group>"; };
+		CD9C0A741A2E4D3B00E767DA /* scope_settings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = scope_settings.xml; sourceTree = "<group>"; };
+		CD9C0A751A2E4D3B00E767DA /* Scripts.iml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scripts.iml; sourceTree = "<group>"; };
+		CD9C0A761A2E4D3B00E767DA /* vcs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vcs.xml; sourceTree = "<group>"; };
+		CD9C0A771A2E4D3B00E767DA /* workspace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = workspace.xml; sourceTree = "<group>"; };
+		CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "content-watchdog.py"; sourceTree = "<group>"; };
+		CD9C0A791A2E4D3B00E767DA /* utility.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = utility.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,7 @@
 		CD9C0A461A2E44A900E767DA = {
 			isa = PBXGroup;
 			children = (
+				CD9C0A6B1A2E4D3B00E767DA /* scripts */,
 				CD9C0A511A2E44A900E767DA /* Watchdog */,
 				CD9C0A5E1A2E44A900E767DA /* WatchdogTests */,
 				CD9C0A501A2E44A900E767DA /* Products */,
@@ -103,6 +115,49 @@
 				CD9C0A601A2E44A900E767DA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD9C0A6B1A2E4D3B00E767DA /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C0A6C1A2E4D3B00E767DA /* .idea */,
+				CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */,
+				CD9C0A791A2E4D3B00E767DA /* utility.py */,
+			);
+			name = scripts;
+			path = Watchdog/scripts;
+			sourceTree = "<group>";
+		};
+		CD9C0A6C1A2E4D3B00E767DA /* .idea */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C0A6D1A2E4D3B00E767DA /* .name */,
+				CD9C0A6E1A2E4D3B00E767DA /* dictionaries */,
+				CD9C0A701A2E4D3B00E767DA /* encodings.xml */,
+				CD9C0A711A2E4D3B00E767DA /* misc.xml */,
+				CD9C0A721A2E4D3B00E767DA /* modules.xml */,
+				CD9C0A731A2E4D3B00E767DA /* scopes */,
+				CD9C0A751A2E4D3B00E767DA /* Scripts.iml */,
+				CD9C0A761A2E4D3B00E767DA /* vcs.xml */,
+				CD9C0A771A2E4D3B00E767DA /* workspace.xml */,
+			);
+			path = .idea;
+			sourceTree = "<group>";
+		};
+		CD9C0A6E1A2E4D3B00E767DA /* dictionaries */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C0A6F1A2E4D3B00E767DA /* Patrick.xml */,
+			);
+			path = dictionaries;
+			sourceTree = "<group>";
+		};
+		CD9C0A731A2E4D3B00E767DA /* scopes */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C0A741A2E4D3B00E767DA /* scope_settings.xml */,
+			);
+			path = scopes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +411,7 @@
 				CD9C0A651A2E44A900E767DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD9C0A661A2E44A900E767DA /* Build configuration list for PBXNativeTarget "WatchdogTests" */ = {
 			isa = XCConfigurationList;
@@ -364,6 +420,7 @@
 				CD9C0A681A2E44A900E767DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
