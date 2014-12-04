@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD9C0A531A2E44A900E767DA /* Watchdog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD9C0A521A2E44A900E767DA /* Watchdog.h */; };
 		CD9C0A551A2E44A900E767DA /* Watchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C0A541A2E44A900E767DA /* Watchdog.m */; };
+		CDF1FA9F1A30BF4C003D421F /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "content-watchdog.py"; sourceTree = "<group>"; };
 		CD9C0A791A2E4D3B00E767DA /* utility.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = utility.py; sourceTree = "<group>"; };
 		CDF1FA301A30A989003D421F /* PythonStuff.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonStuff.py; sourceTree = "<group>"; };
+		CDF1FA9D1A30BF4B003D421F /* Watchdog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Watchdog-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchdog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 			children = (
 				CD9C0A521A2E44A900E767DA /* Watchdog.h */,
 				CD9C0A541A2E44A900E767DA /* Watchdog.m */,
+				CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */,
+				CDF1FA9D1A30BF4B003D421F /* Watchdog-Bridging-Header.h */,
 			);
 			path = Watchdog;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF1FA9F1A30BF4C003D421F /* Watchdog.swift in Sources */,
 				CD9C0A551A2E44A900E767DA /* Watchdog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,9 +238,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Watchdog/Watchdog-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -242,9 +252,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Watchdog/Watchdog-Bridging-Header.h";
 			};
 			name = Release;
 		};

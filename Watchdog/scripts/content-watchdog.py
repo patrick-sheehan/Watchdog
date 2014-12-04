@@ -8,7 +8,7 @@ class ContentWatchdog:
         self.blockEmailAddress = blockEmailAddress
         pass
 
-    # Adjust variables to preference
+    # Adjust hard coded variables instead of using init method
     # minLength = 10
     # maxLength = 140
     # blockPhoneNumbers = True
@@ -23,7 +23,6 @@ class ContentWatchdog:
             self.__init__()
 
         return self
-
 
     def pyTestMethod_(self, message):
         print 'The passed type is ' + str(type(message))
@@ -46,7 +45,7 @@ class ContentWatchdog:
         return True
     # check if message is acceptable for submission
 
-    def blockEmail(self, message):
+    def shouldBlockForEmail(self, message):
         regex_pattern = r'([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)'
         if self.blockEmailAddress:
             if re.search(regex_pattern, message) is not None:
@@ -55,7 +54,7 @@ class ContentWatchdog:
         return False
     # check if message should be blocked because of an email address
 
-    def blockNumber(self, message):
+    def shouldBlockForNumber(self, message):
         listOfNumbers = map(int, re.findall('\d+', message))
         numberString = ""
         for number in listOfNumbers:
@@ -67,11 +66,11 @@ class ContentWatchdog:
 
     # check if message should be blocked because of a phone number
 
-    def isVulgar(self, message):
+    def shouldBlockForVulgar(self, message):
         return False
     # check if the message is classified as vulgar
 
-    def isSexual(self, message):
+    def shouldBlockForSexual(self, message):
         return False
     # check if the message is classified as sexual
 
