@@ -10,6 +10,7 @@
 		CD9C0A531A2E44A900E767DA /* Watchdog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD9C0A521A2E44A900E767DA /* Watchdog.h */; };
 		CD9C0A551A2E44A900E767DA /* Watchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C0A541A2E44A900E767DA /* Watchdog.m */; };
 		CD9C0A5B1A2E44A900E767DA /* libWatchdog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9C0A4F1A2E44A900E767DA /* libWatchdog.a */; };
+		CDF1FA1F1A30A151003D421F /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF1FA1E1A30A151003D421F /* Python.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CD9C0A771A2E4D3B00E767DA /* workspace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = workspace.xml; sourceTree = "<group>"; };
 		CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "content-watchdog.py"; sourceTree = "<group>"; };
 		CD9C0A791A2E4D3B00E767DA /* utility.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = utility.py; sourceTree = "<group>"; };
+		CDF1FA1E1A30A151003D421F /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = ../../../../../System/Library/Frameworks/Python.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF1FA1F1A30A151003D421F /* Python.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,7 @@
 		CD9C0A461A2E44A900E767DA = {
 			isa = PBXGroup;
 			children = (
+				CDF1FA1E1A30A151003D421F /* Python.framework */,
 				CD9C0A6B1A2E4D3B00E767DA /* scripts */,
 				CD9C0A511A2E44A900E767DA /* Watchdog */,
 				CD9C0A5E1A2E44A900E767DA /* WatchdogTests */,
@@ -303,6 +307,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -337,6 +346,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
