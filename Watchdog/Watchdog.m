@@ -8,6 +8,30 @@
 
 #import "Watchdog.h"
 
+@class PythonStuff;
+
+@interface NSObject (MyNewMethods)
+//- (void) pyTestMethod;
+@end
+
 @implementation Watchdog
 
+- (id)init
+{
+    self = [super init];
+    Class ContentWatchDogClass = NSClassFromString(@"ContentWatchdog");
+    self.myContentWatchdog = [ContentWatchDogClass new];
+    
+    
+    return self;
+}
+
+- (NSArray *) arrayOfNamedStrings;
+{
+    if (!_stuff) {
+        Class PythonStuffClass = NSClassFromString(@"PythonStuff");
+        _stuff = [PythonStuffClass new];
+    }
+    return [_stuff arrayOfNamedStrings];
+}
 @end

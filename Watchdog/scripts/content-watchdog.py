@@ -13,6 +13,21 @@ class ContentWatchdog:
     # maxLength = 140
     # blockPhoneNumbers = True
     # blockEmailAddress = True
+    
+    def new(self):
+        self = super(ContentWatchdog, self).new()
+        print u"new PythonStuff created" #for debugging
+        if self is None:
+            return None
+        else:
+            self.__init__()
+
+        return self
+
+
+    def pyTestMethod_(self, message):
+        print 'The passed type is ' + str(type(message))
+    
 
     def shouldSubmitMessage(self, message):
         if len(message) < self.minLength or len(message) > self.maxLength:
