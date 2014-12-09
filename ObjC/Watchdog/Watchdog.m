@@ -104,7 +104,6 @@
     
     [message getCharacters:buffer range:NSMakeRange(0, len)];
     
-    //    NSLog(@"getCharacters:range: with unichar buffer");
     int numCount = 0;
     for(int i = 0; i < len; i++) {
         if (isdigit(buffer[i]))
@@ -128,12 +127,17 @@
         return NO;
     }
     
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+";
+    
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    if ([emailTest evaluateWithObject:message])
+    
+    for (NSString *word in [message componentsSeparatedByString:@" "])
     {
-        NSLog(@"EMAIL REJECTION: %@", message);
-        return YES;
+        if ([emailTest evaluateWithObject:word])
+        {
+            NSLog(@"EMAIL REJECTION: %@", message);
+            return YES;
+        }
     }
     
     return NO;
