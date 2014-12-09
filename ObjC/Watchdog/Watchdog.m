@@ -154,7 +154,7 @@
     
     for (NSString *word in [message componentsSeparatedByString:@" "])
     {
-        if ([badWords containsObject:word])
+        if ([badWords containsObject:[word lowercaseString]])
         {
             return YES;
         }

@@ -43,6 +43,7 @@
 		CDF1FAAF1A30C5C3003D421F /* WatchdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF1FAB21A30C5C3003D421F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF1FABB1A30C83F003D421F /* WatchdogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchdogTests.m; sourceTree = "<group>"; };
+		CDF66BED1A36E5F1008C62DD /* bad_words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bad_words.txt; path = ../Resources/bad_words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +68,7 @@
 		CD9C0A461A2E44A900E767DA = {
 			isa = PBXGroup;
 			children = (
+				CDF66BEC1A36E5E3008C62DD /* Resources */,
 				CD9C0A511A2E44A900E767DA /* Watchdog */,
 				CDF1FAB01A30C5C3003D421F /* WatchdogTests */,
 				CD9C0A501A2E44A900E767DA /* Products */,
@@ -106,6 +108,14 @@
 				CDF1FAB21A30C5C3003D421F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDF66BEC1A36E5E3008C62DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF66BED1A36E5F1008C62DD /* bad_words.txt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

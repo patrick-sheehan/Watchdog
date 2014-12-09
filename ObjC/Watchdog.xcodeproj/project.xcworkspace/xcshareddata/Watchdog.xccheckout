@@ -14,11 +14,11 @@
 		<string>https://github.com/pas0185/Watchdog.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Watchdog.xcodeproj</string>
+	<string>ObjC/Watchdog.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DB9C02E9313E64BF41640AF890E85D985263D2D7</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/pas0185/Watchdog.git</string>
