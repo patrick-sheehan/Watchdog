@@ -124,6 +124,18 @@
 }
 - (BOOL)shouldBlockForVulgar:(NSString*) message
 {
+    NSArray *badWords = [[NSString stringWithContentsOfFile:@"bad_words.txt"
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:nil]
+                        componentsSeparatedByString:@"\n"];
+    
+    for (NSString *word in [message componentsSeparatedByString:@" "])
+    {
+        if ([badWords containsObject:word])
+        {
+            return YES;
+        }
+    }
     
     return NO;
 }
