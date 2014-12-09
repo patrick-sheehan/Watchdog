@@ -12,8 +12,10 @@
 
 @property (nonatomic) int minLength;
 @property (nonatomic) int maxLength;
-@property (nonatomic) BOOL blockPhoneNumbers;
-@property (nonatomic) BOOL blockEmailAddresses;
+@property (nonatomic) BOOL blockPhone;
+@property (nonatomic) BOOL blockEmail;
+@property (nonatomic) BOOL blockVulgar;
+@property (nonatomic) BOOL blockSexual;
 
 @end
 
@@ -26,13 +28,17 @@
     {
         NSNumber *minLength = [options objectForKey:@"minLength"];
         NSNumber *maxLength = [options objectForKey:@"maxLength"];
-        NSNumber *blockPhoneNumbers = [options objectForKey:@"blockPhoneNumbers"];
-        NSNumber *blockEmailAddresses = [options objectForKey:@"blockEmailAddresses"];
+        NSNumber *blockPhone = [options objectForKey:@"blockPhone"];
+        NSNumber *blockEmail = [options objectForKey:@"blockEmail"];
+        NSNumber *blockVulgar = [options objectForKey:@"blockVulgar"];
+        NSNumber *blockSexual = [options objectForKey:@"blockSexual"];
         
         self.minLength = (minLength == nil) ? 10 : [minLength intValue];
         self.maxLength = (maxLength == nil) ? 140 : [maxLength intValue];
-        self.blockPhoneNumbers = (blockPhoneNumbers == nil) ? NO : [blockPhoneNumbers boolValue];
-        self.blockEmailAddresses = (blockEmailAddresses == nil) ? NO : [blockEmailAddresses boolValue];
+        self.blockPhone = (blockPhone == nil) ? NO : [blockPhone boolValue];
+        self.blockEmail = (blockEmail == nil) ? NO : [blockEmail boolValue];
+        self.blockVulgar = (blockVulgar == nil) ? NO : [blockVulgar boolValue];
+        self.blockSexual = (blockSexual == nil) ? NO : [blockSexual boolValue];
     }
     
     return self;
@@ -88,6 +94,11 @@
 }
 - (BOOL)shouldBlockForNumber:(NSString*) message
 {
+    if (!self.blockPhone)
+    {
+        return NO;
+    }
+    
     NSUInteger len = [message length];
     unichar buffer[len+1];
     
@@ -112,6 +123,11 @@
 }
 - (BOOL)shouldBlockForEmail:(NSString*) message
 {
+    if (!self.blockEmail)
+    {
+        return NO;
+    }
+    
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     if ([emailTest evaluateWithObject:message])
@@ -124,6 +140,11 @@
 }
 - (BOOL)shouldBlockForVulgar:(NSString*) message
 {
+    if (!self.blockVulgar)
+    {
+        return NO;
+    }
+    
     NSString* path = [[NSBundle mainBundle] pathForResource:@"bad_words"
                                                      ofType:@"txt"];
     NSArray *badWords = [[NSString stringWithContentsOfFile:path
@@ -143,7 +164,13 @@
 }
 - (BOOL)shouldBlockForSexual:(NSString*) message
 {
+    if (!self.blockSexual)
+    {
+        return NO;
+    }
     
+    
+    // TODO: this function
     return NO;
 }
 @end
