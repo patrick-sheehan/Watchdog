@@ -1,84 +1,94 @@
 import re
 
 class ContentWatchdog:
-    def __init__(self, minLength, maxLength, blockPhoneNumbers, blockEmailAddress):
+    def __init__(self, minLength, maxLength, blockPhone, blockEmail, blockVulgar):
         self.minLength = minLength
         self.maxLength = maxLength
-        self.blockPhoneNumbers = blockPhoneNumbers
-        self.blockEmailAddress = blockEmailAddress
+        self.blockPhone = blockPhone
+        self.blockEmail = blockEmail
+        self.blockVulgar = blockVulgar
         pass
 
-    # Adjust hard coded variables instead of using init method
+    # Can adjust hard-coded variables instead of using init method
     # minLength = 10
     # maxLength = 140
-    # blockPhoneNumbers = True
-    # blockEmailAddress = True
-    
-    def new(self):
-        self = super(ContentWatchdog, self).new()
-        print u"new PythonStuff created" #for debugging
-        if self is None:
-            return None
-        else:
-            self.__init__()
+    # blockPhone = True
+    # blockEmail = True
 
-        return self
+    def should_submit_message(self, message):
 
-    def pyTestMethod_(self, message):
-        print 'The passed type is ' + str(type(message))
-    
+        accepted = True
 
-    def shouldSubmitMessage(self, message):
         if len(message) < self.minLength or len(message) > self.maxLength:
             print 'LENGTH REJECTION : ' + message
-            return False
-        if self.blockEmail(message):
+            accepted = False
+        if self.should_block_for_email(message):
             print 'EMAIL REJECTION  : ' + message
-            return False
-        if self.blockNumber(message):
+            accepted = False
+        if self.should_block_for_number(message):
             print 'PHONE REJECTION  : ' + message
-            return False
+            accepted = False
+        if self.should_block_for_vulgar(message):
+            print 'VULGAR REJECTION : ' + message
+            accepted = False
 
+        if accepted:
+            print 'Accepted!        : ' + message
+            return True
 
-
-        print 'Accepted!        : ' + message
-        return True
+        return False
     # check if message is acceptable for submission
 
-    def shouldBlockForEmail(self, message):
-        regex_pattern = r'([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)'
-        if self.blockEmailAddress:
+    def is_valid_length(self, message):
+        if len(message) < self.minLength or len(message) > self.maxLength:
+            return True
+
+        return False
+    #check if message is in the valid size range
+
+    def should_block_for_number(self, message):
+        if self.blockPhone:
+            listOfNumbers = map(int, re.findall('\d+', message))
+            numberString = ""
+            for number in listOfNumbers:
+                numberString += str(number)
+
+            if len(numberString) == 10:
+                return True
+
+        return False
+    # check if message should be blocked because of a phone number
+
+    def should_block_for_email(self, message):
+        if self.blockEmail:
+            regex_pattern = r'([\w\-\.]+@(\w[\w\-]+\.)+[\w\-]+)'
             if re.search(regex_pattern, message) is not None:
                 return True
 
         return False
     # check if message should be blocked because of an email address
 
-    def shouldBlockForNumber(self, message):
-        listOfNumbers = map(int, re.findall('\d+', message))
-        numberString = ""
-        for number in listOfNumbers:
-            numberString += str(number)
+    def should_block_for_vulgar(self, message):
+        if self.blockVulgar:
+            words_file = open("../Resources/bad_words.txt")
+            bad_words = words_file.read().split('\n')
 
-        if len(numberString) == 10:
-            return True
-        return False
+            for word in message.split(' '):
+                if bad_words.__contains__(word.lower()):
+                    return True
 
-    # check if message should be blocked because of a phone number
-
-    def shouldBlockForVulgar(self, message):
         return False
     # check if the message is classified as vulgar
 
-    def shouldBlockForSexual(self, message):
+    def should_block_for_sexual(self, message):
         return False
     # check if the message is classified as sexual
 
-
 if __name__ == '__main__':
 
-    watchdog = ContentWatchdog(10, 140, True, True)
+    watchdog = ContentWatchdog(10, 140, True, True, True)
     messages = ['howdy fools, what\'s up with yall?',
+                'This has some shit and poop words in it',
                 'yo yo yo test post #1642',
                 'this has an email@address.com',
                 'girl can I have yo numba? can I have it?',
@@ -88,8 +98,6 @@ if __name__ == '__main__':
                 'Can I get away with my roommates phone number? as245j - 586 whoops 5453']
 
     for message in messages:
-        result = watchdog.shouldSubmitMessage(message)
+        result = watchdog.should_submit_message(message)
 
     pass
-
-    #your code
