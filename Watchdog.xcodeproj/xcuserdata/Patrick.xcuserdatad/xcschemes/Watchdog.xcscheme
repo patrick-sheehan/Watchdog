@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD9C0A591A2E44A900E767DA"
+               BlueprintIdentifier = "CDF1FAAE1A30C5C3003D421F"
                BuildableName = "WatchdogTests.xctest"
                BlueprintName = "WatchdogTests"
                ReferencedContainer = "container:Watchdog.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD9C0A591A2E44A900E767DA"
+               BlueprintIdentifier = "CDF1FAAE1A30C5C3003D421F"
                BuildableName = "WatchdogTests.xctest"
                BlueprintName = "WatchdogTests"
                ReferencedContainer = "container:Watchdog.xcodeproj">
@@ -68,7 +68,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">

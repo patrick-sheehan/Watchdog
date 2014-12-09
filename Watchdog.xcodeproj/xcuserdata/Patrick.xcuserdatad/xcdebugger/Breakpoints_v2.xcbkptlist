@@ -17,62 +17,94 @@
             endingLineNumber = "40"
             landmarkName = "-testExample"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WatchdogTests/WatchdogTests.m"
+            timestampString = "439405532.27171"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-setUp"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WatchdogTests/WatchdogTests.m"
+            timestampString = "439405846.297403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-testExample"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[Watchdog_Tests testExample]"
-                  moduleName = "Watchdog Tests"
-                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/Watchdog%20Tests/Watchdog_Tests.m"
-                  timestampString = "439397420.646812"
+                  symbolName = "-[WatchdogTests testExample]"
+                  moduleName = "WatchdogTests"
+                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/WatchdogTests/WatchdogTests.m"
+                  timestampString = "439406049.477968"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "98">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[Watchdog_Tests testExample]"
-                  moduleName = "Watchdog Tests"
-                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/Watchdog%20Tests/Watchdog_Tests.m"
-                  timestampString = "439397420.647108"
+                  symbolName = "-[WatchdogTests testExample]"
+                  moduleName = "WatchdogTests"
+                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/WatchdogTests/WatchdogTests.m"
+                  timestampString = "439406049.478319"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "470">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "374">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[Watchdog_Tests testExample]"
-                  moduleName = "Watchdog Tests"
-                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/Watchdog%20Tests/Watchdog_Tests.m"
-                  timestampString = "439397420.647602"
+                  symbolName = "-[WatchdogTests testExample]"
+                  moduleName = "WatchdogTests"
+                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/WatchdogTests/WatchdogTests.m"
+                  timestampString = "439406049.478972"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "516">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "398">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[Watchdog_Tests testExample]"
-                  moduleName = "Watchdog Tests"
-                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/Watchdog%20Tests/Watchdog_Tests.m"
-                  timestampString = "439397420.647792"
+                  symbolName = "-[WatchdogTests testExample]"
+                  moduleName = "WatchdogTests"
+                  urlString = "file:///Users/Patrick/Documents/dev/Watchdog/WatchdogTests/WatchdogTests.m"
+                  timestampString = "439406049.479231"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "644">
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "526">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1ED4B61A35AB9800F8A1AF /* libWatchdog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9C0A4F1A2E44A900E767DA /* libWatchdog.a */; };
 		CD9C0A531A2E44A900E767DA /* Watchdog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD9C0A521A2E44A900E767DA /* Watchdog.h */; };
 		CD9C0A551A2E44A900E767DA /* Watchdog.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C0A541A2E44A900E767DA /* Watchdog.m */; };
-		CDF1FA9F1A30BF4C003D421F /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */; };
+		CDF1FABC1A30C83F003D421F /* WatchdogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF1FABB1A30C83F003D421F /* WatchdogTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDF1FAB61A30C5C3003D421F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD9C0A471A2E44A900E767DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD9C0A4E1A2E44A900E767DA;
+			remoteInfo = Watchdog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CD9C0A4D1A2E44A900E767DA /* CopyFiles */ = {
@@ -29,11 +40,9 @@
 		CD9C0A4F1A2E44A900E767DA /* libWatchdog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWatchdog.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD9C0A521A2E44A900E767DA /* Watchdog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Watchdog.h; sourceTree = "<group>"; };
 		CD9C0A541A2E44A900E767DA /* Watchdog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Watchdog.m; sourceTree = "<group>"; };
-		CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "content-watchdog.py"; sourceTree = "<group>"; };
-		CD9C0A791A2E4D3B00E767DA /* utility.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = utility.py; sourceTree = "<group>"; };
-		CDF1FA301A30A989003D421F /* PythonStuff.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PythonStuff.py; sourceTree = "<group>"; };
-		CDF1FA9D1A30BF4B003D421F /* Watchdog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Watchdog-Bridging-Header.h"; sourceTree = "<group>"; };
-		CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Watchdog.swift; sourceTree = "<group>"; };
+		CDF1FAAF1A30C5C3003D421F /* WatchdogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchdogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF1FAB21A30C5C3003D421F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF1FABB1A30C83F003D421F /* WatchdogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchdogTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,14 +53,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDF1FAAC1A30C5C3003D421F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1ED4B61A35AB9800F8A1AF /* libWatchdog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CD9C0A461A2E44A900E767DA = {
 			isa = PBXGroup;
 			children = (
-				CD9C0A6B1A2E4D3B00E767DA /* scripts */,
 				CD9C0A511A2E44A900E767DA /* Watchdog */,
+				CDF1FAB01A30C5C3003D421F /* WatchdogTests */,
 				CD9C0A501A2E44A900E767DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				CD9C0A4F1A2E44A900E767DA /* libWatchdog.a */,
+				CDF1FAAF1A30C5C3003D421F /* WatchdogTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,21 +87,25 @@
 			children = (
 				CD9C0A521A2E44A900E767DA /* Watchdog.h */,
 				CD9C0A541A2E44A900E767DA /* Watchdog.m */,
-				CDF1FA9E1A30BF4C003D421F /* Watchdog.swift */,
-				CDF1FA9D1A30BF4B003D421F /* Watchdog-Bridging-Header.h */,
 			);
 			path = Watchdog;
 			sourceTree = "<group>";
 		};
-		CD9C0A6B1A2E4D3B00E767DA /* scripts */ = {
+		CDF1FAB01A30C5C3003D421F /* WatchdogTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD9C0A781A2E4D3B00E767DA /* content-watchdog.py */,
-				CD9C0A791A2E4D3B00E767DA /* utility.py */,
-				CDF1FA301A30A989003D421F /* PythonStuff.py */,
+				CDF1FAB11A30C5C3003D421F /* Supporting Files */,
+				CDF1FABB1A30C83F003D421F /* WatchdogTests.m */,
 			);
-			name = scripts;
-			path = Watchdog/scripts;
+			path = WatchdogTests;
+			sourceTree = "<group>";
+		};
+		CDF1FAB11A30C5C3003D421F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDF1FAB21A30C5C3003D421F /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +128,24 @@
 			productReference = CD9C0A4F1A2E44A900E767DA /* libWatchdog.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		CDF1FAAE1A30C5C3003D421F /* WatchdogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF1FABA1A30C5C3003D421F /* Build configuration list for PBXNativeTarget "WatchdogTests" */;
+			buildPhases = (
+				CDF1FAAB1A30C5C3003D421F /* Sources */,
+				CDF1FAAC1A30C5C3003D421F /* Frameworks */,
+				CDF1FAAD1A30C5C3003D421F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF1FAB71A30C5C3003D421F /* PBXTargetDependency */,
+			);
+			name = WatchdogTests;
+			productName = WatchdogTests;
+			productReference = CDF1FAAF1A30C5C3003D421F /* WatchdogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +156,9 @@
 				ORGANIZATIONNAME = Appuccino;
 				TargetAttributes = {
 					CD9C0A4E1A2E44A900E767DA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					CDF1FAAE1A30C5C3003D421F = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -133,21 +176,47 @@
 			projectRoot = "";
 			targets = (
 				CD9C0A4E1A2E44A900E767DA /* Watchdog */,
+				CDF1FAAE1A30C5C3003D421F /* WatchdogTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDF1FAAD1A30C5C3003D421F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD9C0A4B1A2E44A900E767DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF1FA9F1A30BF4C003D421F /* Watchdog.swift in Sources */,
 				CD9C0A551A2E44A900E767DA /* Watchdog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDF1FAAB1A30C5C3003D421F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF1FABC1A30C83F003D421F /* WatchdogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDF1FAB71A30C5C3003D421F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD9C0A4E1A2E44A900E767DA /* Watchdog */;
+			targetProxy = CDF1FAB61A30C5C3003D421F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CD9C0A611A2E44A900E767DA /* Debug */ = {
@@ -261,6 +330,37 @@
 			};
 			name = Release;
 		};
+		CDF1FAB81A30C5C3003D421F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WatchdogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDF1FAB91A30C5C3003D421F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WatchdogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -278,6 +378,15 @@
 			buildConfigurations = (
 				CD9C0A641A2E44A900E767DA /* Debug */,
 				CD9C0A651A2E44A900E767DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF1FABA1A30C5C3003D421F /* Build configuration list for PBXNativeTarget "WatchdogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF1FAB81A30C5C3003D421F /* Debug */,
+				CDF1FAB91A30C5C3003D421F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
